@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'application', "https://js.stripe.com/v2/", "https://js.stripe.com/v3/", 'data-turbolinks-track': 'reload' %>
 
-    <%= tag :meta, name: "stripe-public-key", content: Figaro.env.strip_publishable_key %>
+    <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
   </head>
 
   <body class="<%= yield (:body_class) %>">
@@ -69,11 +69,9 @@
     </div>
   </nav>
 
-  <section class="section">
-    <div class="container">
+
       <%= yield %>
-    </div>
-  </section>
+
 
   <footer class="footer">
     <div class="container">
