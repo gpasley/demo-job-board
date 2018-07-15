@@ -34,7 +34,7 @@ class JobsController < ApplicationController
     token = params[:stripeToken]
     job_type = params[:job][:job_type]
 
-    job_title = params[:job][:job_title]
+    job_title = params[:job][:title]
     card_brand = params[:user][:card_brand]
     card_exp_month = params[:user][:card_exp_month]
     card_exp_year = params[:user][:card_exp_year]
